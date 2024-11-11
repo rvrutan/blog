@@ -10,7 +10,9 @@
 
 // TODO: Redirect to the home page using the `redirectPage` function found in logic.js when the back button is clicked
 
-// redirectPage('./index.html');
+function goBack(){
+redirectPage('./index.html');
+};
 
-// const backButton = document.querySelector('button[type="back"]');
-// backButton.addEventListener('click');
+const backButton = document.getElementById('back');
+backButton.addEventListener('click' , goBack);
