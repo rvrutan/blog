@@ -13,15 +13,16 @@ const username = nameInput.value;
 const title = titleInput.value;
 const content = contentInput.value;
 
-if (username === '' || title === '' || content === '') {
+localStorage.setItem('formData' , JSON.stringify({ username, title, content}));
+
+if (username === '' || title === '' || content === '' ) {
     errorMessage.style.display = 'block';
     return;
 } else {
     redirectPage('./blog.html');
 }
-}
 
-localStorage.setItem('formData' , JSON.stringify({ name, title, content}));
+}
 
 // TODO: Add an event listener to the form on submit. Call the function to handle the form submission.
 

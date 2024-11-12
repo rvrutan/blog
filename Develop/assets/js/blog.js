@@ -1,5 +1,6 @@
 // TODO: Create a variable that selects the main element, and a variable that selects the back button element
-
+const mainElement = document.querySelector('main');
+const backButton = document.getElementById('back');
 // TODO: Create a function that builds an element and appends it to the DOM
 
 // TODO: Create a function that handles the case where there are no blog posts to display
@@ -14,5 +15,4 @@ function goBack(){
 redirectPage('./index.html');
 };
 
-const backButton = document.getElementById('back');
 backButton.addEventListener('click' , goBack);
