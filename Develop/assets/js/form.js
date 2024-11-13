@@ -30,6 +30,8 @@ function formSubmit(event) {
   users.push(user);
   localStorage.setItem("users", JSON.stringify(users));
 
+  
+
   redirectPage("./blog.html");
 }
 

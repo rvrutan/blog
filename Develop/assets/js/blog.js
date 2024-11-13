@@ -11,8 +11,24 @@ const backButton = document.getElementById('back');
 
 // TODO: Redirect to the home page using the `redirectPage` function found in logic.js when the back button is clicked
 
+function replace (){
+  const usersString = localStorage.getItem('users');
+  const users = JSON.parse(usersString);
+  const cardElements = document.querySelectorAll('.card');
+
+  users.forEach((user, index) => {
+      const cardElement = cardElements[index];
+      cardElement.innerHTML = `<h2>${user.title}</h2> <blockquote>${user.content}</blockquote><p> Posted by: ${user.username}</p>`;
+  });
+}
+
+
 function goBack(){
 redirectPage('./index.html');
 };
 
 backButton.addEventListener('click' , goBack);
+
+document.addEventListener('DOMContentLoaded' , () => {
+replace();
+}); 
