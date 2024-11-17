@@ -1,53 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Roni's Blog</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Roni's Blog</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
 
-  <link rel="stylesheet" href="./assets/css/styles.css" />
-  <link rel="stylesheet" href="./assets/css/form.css" />
+    <script defer src="./assets/js/logic.js" type="text/javascript"></script>
+    <script defer src="./assets/js/form.js" type="text/javascript"></script>
+  </head>
 
-  <script defer src="./assets/js/logic.js" type="text/javascript"></script>
-  <script defer src="./assets/js/form.js" type="text/javascript"></script>
-</head>
+  <body>
+    <header>
+      <button class="dark" id="toggle">☽</button>
+    </header>
+    <!-- TODO: Create landing page elements to match the mock-up provided. At the very least, include the following elements. -->
+    <main>
+      <aside>
+        <h2>Roni's Blog</h2>
+      </aside>
+      <section>
+        <h2>What's going on?</h2>
 
-<body>
-  <header>
-    <button class="dark" id="toggle">☽</button>
-  </header>
-  <!-- TODO: Create landing page elements to match the mock-up provided. At the very least, include the following elements. -->
-  <main>
-    <aside>
-      <h2>Roni's Blog</h2>
-    </aside>
-    <section>
-      <h2>What's going on?</h2>
+        <!-- A form element that contains the following: -->
+        <!-- An input element whose label and id are `username` -->
+        <!-- An input element whose label and id are `title` -->
+        <!-- A textarea element whose label and id are `content` -->
+        <!-- A p element whose id is `error` -->
+        <form id="blogform">
+          <label>Username:</label>
+          <input type="text" id="username" />
 
-      <!-- A form element that contains the following: -->
-      <!-- An input element whose label and id are `username` -->
-      <!-- An input element whose label and id are `title` -->
-      <!-- A textarea element whose label and id are `content` -->
-      <!-- A p element whose id is `error` -->
-      <form id="blogform">
+          <label> Title:</label>
+          <input label="title" id="title" />
 
-        <label>Username:</label>
-        <input type="text" id="username">
+          <label>Content:</label>
+          <textarea label="content" id="content"> </textarea>
 
-        <label> Title:</label>
-        <input label="title" id="title">
-
-        <label>Content:</label>
-        <textarea label="content" id="content"> </textarea>
-
-        <button type="submit">Submit</button>
-        <p id="error">Please fill all the fields before submitting.</p>
-      </form>
-    </section>
-  </main>
-
-</body>
-
+          <button type="submit">Submit</button>
+          <p id="error">Please fill all the fields before submitting.</p>
+        </form>
+      </section>
+    </main>
+  </body>
 </html>
